@@ -15,26 +15,33 @@ if [ "$1" == "--create" ];then
   echo ""
   echo " votre option est --create"
   echo ""
+ docker run -tid --name $USER-alpine alpine:latest
+
 # si option est drop
 elif [ "$1" == "--drop" ];then
   echo ""
   echo " votre option est --drop"
   echo ""
+ docker rm -f $USER-alpine
+
 #si option est infos
 elif [ "$1" == "--infos" ];then
-echo ""
-echo " votre option est --infos"
-echo ""
+ echo ""
+ echo " votre option est --infos"
+ echo ""
+
 # si option est start
 elif [ "$1" == "--start" ];then
-echo ""
-echo " votre option est --start"
-echo ""
+ echo ""
+ echo " votre option est --start"
+ echo ""
+
 # si option est ansible
 elif [ "$1" == "--ansible" ];then
-echo ""
-echo " votre option est --ansible"
-echo ""
+ echo ""
+ echo " votre option est --ansible"
+ echo ""
+
 
 #si aucune option
 else
